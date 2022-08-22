@@ -1,0 +1,15 @@
+{
+  "name": "timer",
+  "version": "1.0.0",
+  "description": "TImer app that display time in style  ##At the end of this project I hope to have implemented features like day and night mode, light and dark mode, a countdown timer, an alarm. and the likes",
+  "main": "index.js",
+  "scripts": {
+    "Watch": "tailwindcss -i ./index.css -o ./main/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}

@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: 'Lato';
+  src: url('/Lato-Regular.ttf');
+}
+
+body{
+  @apply bg-gradient-to-b from-[#44b5d4] to-[#3982f5] m-0 p-0 bg-no-repeat 
+  font-lato grid-rows-[1fr_6fr_1fr] grid-cols-1
+   text-white w-screen h-screen grid
+}
+header{
+  @apply grid grid-cols-2 justify-items-end py-5
+}
+header img{
+  @apply rounded-full border-4 p-2 mr-14
+}
+.name{
+  @apply uppercase text-2xl items-end
+}
+main{
+  @apply grid place-items-center w-full h-full place-content-evenly
+}
+div.time{
+  @apply grid-flow-col grid justify-evenly gap-x-[1vw]
+}
+div#card{
+  @apply w-[15vw] h-[25vh] bg-[#44B5D4] rounded-3xl shadow-xl grid grid-cols-1 grid-rows-[2fr_6fr]
+}
+span.des{
+  @apply grid items-end text-[18px] pt-[3px] border-b-[4px] text-center
+}
+:is(span.month, span.year, span.day, span.hour, span.minute, span.second){
+  @apply grid items-center text-[2.5em] text-center drop-shadow-2xl
+}
+footer{
+  @apply grid text-[20px] text-center 
+}
