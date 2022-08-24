@@ -11,7 +11,7 @@ let footer = document.querySelector("footer")
 let mag = document.querySelector("img.img")
 let opt = document.querySelector("#opt")
 let card = document.querySelector(".time")
-
+console.log()
 //settings functionality area for box selection
 let All =  {
   dom: document.querySelector("button#all"),
@@ -42,34 +42,151 @@ let Second = {
   statu: false
 }
 
-console.log(card)
 
-function clicke(pa){
-//   console.log(card)
-// if(card.classList.contains('hidden')){
-//   card.classList.remove('hidden')
-// }else{
-//   card.classList.add('hidden')
-// }
 
-  
+function clic(pa){
   if(pa.statu === false){
     pa.statu = true
-  card.children[0].classList.add('hidden')
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "All") {
+      for(let i = 0; i < card.children.length; i++){
+      card.children[i].style.display = "none"
+      }
+}
+  }
+else if(pa.statu === true){
+  pa.statu = false
+  pa.dom.style.borderLeft = "none"
+  if(pa = "All") {
+    for(let i = 0; i < card.children.length; i++){
+    card.children[i].style.display = "grid"
+    }
+  }
+}
+}
+
+function cli(pa){
+  if(pa.statu === false){
+    pa.statu = true
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "Year")
+    {
+    card.children[0].style.display = "none"
+    }
 }
 else if(pa.statu === true){
   pa.statu = false
-  }
-  //check toggle succesful output result next 
-  //console.log(pa.statu)
-//   if(Year.statu === true){
-//    year.classList.add('hidden')
-//    }
-//    else{
-//     console.log("year")
-//    //  year.classList.remove('hidden')
-//   }
+  pa.dom.style.borderLeft = "none"
+  if(pa = "Year"){
+card.children[0].style.display = "grid"
 }
+  }
+}
+
+function cl(pa){
+  if(pa.statu === false){
+    pa.statu = true
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "Month")
+    {
+    card.children[1].style.display = "none"
+    }
+}
+else if(pa.statu === true){
+  pa.statu = false
+  pa.dom.style.borderLeft = "none"
+  if(pa = "Month"){
+card.children[1].style.display = "grid"
+}
+  }
+}
+
+function c(pa){
+  if(pa.statu === false){
+    pa.statu = true
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "Day")
+    {
+    card.children[2].style.display = "none"
+    }
+}
+else if(pa.statu === true){
+  pa.statu = false
+  pa.dom.style.borderLeft = "none"
+  if(pa = "Day"){
+card.children[2].style.display = "grid"
+}
+  }
+}
+
+function lic(pa){
+  if(pa.statu === false){
+    pa.statu = true
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "Hour")
+    {
+    card.children[3].style.display = "none"
+    }
+}
+else if(pa.statu === true){
+  pa.statu = false
+  pa.dom.style.borderLeft = "none"
+  if(pa = "Hour"){
+card.children[3].style.display = "grid"
+}
+  }
+}
+
+function cic(pa){
+  if(pa.statu === false){
+    pa.statu = true
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "Minute")
+    {
+    card.children[4].style.display = "none"
+    }
+}
+else if(pa.statu === true){
+  pa.statu = false
+  pa.dom.style.borderLeft = "none"
+  if(pa = "Minute"){
+card.children[4].style.display = "grid"
+}
+  }
+}
+
+function ick(pa){
+  if(pa.statu === false){
+    pa.statu = true
+    pa.dom.style.borderLeft = "white"
+    pa.dom.style.borderLeft = "2px"
+    pa.dom.style.borderLeft = "solid"
+    if(pa = "Second")
+    {
+    card.children[5].style.display = "none"
+    }
+}
+else if(pa.statu === true){
+  pa.statu = false
+  pa.dom.style.borderLeft = "none"
+  if(pa = "Second"){
+card.children[5].style.display = "grid"
+}
+  }
+}
+
 
 
 //toogle for display of options

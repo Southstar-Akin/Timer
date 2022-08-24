@@ -584,11 +584,11 @@ body {
   width: 100vw;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: 1fr 6fr 1fr;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: #383838;
-  --tw-gradient-to: rgb(56 56 56 / 0);
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #aed797;
+  --tw-gradient-to: rgb(174 215 151 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #2d2d2d;
+  --tw-gradient-to: #73c9b7;
   background-repeat: no-repeat;
   padding: 0px;
   font-family: Lato;
@@ -708,7 +708,7 @@ div#card {
   overflow: hidden;
   border-radius: 1.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(39 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(191 238 163 / var(--tw-bg-opacity));
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -737,27 +737,27 @@ div#card:hover {
 
 div#card:nth-child(2) {
   --tw-bg-opacity: 1;
-  background-color: rgb(182 201 187 / var(--tw-bg-opacity));
+  background-color: rgb(114 178 164 / var(--tw-bg-opacity));
 }
 
 div#card:nth-child(3) {
   --tw-bg-opacity: 1;
-  background-color: rgb(170 172 176 / var(--tw-bg-opacity));
+  background-color: rgb(152 210 119 / var(--tw-bg-opacity));
 }
 
 div#card:nth-child(4) {
   --tw-bg-opacity: 1;
-  background-color: rgb(150 132 161 / var(--tw-bg-opacity));
+  background-color: rgb(108 188 171 / var(--tw-bg-opacity));
 }
 
 div#card:nth-child(5) {
   --tw-bg-opacity: 1;
-  background-color: rgb(152 95 153 / var(--tw-bg-opacity));
+  background-color: rgb(128 192 131 / var(--tw-bg-opacity));
 }
 
 div#card:last-child {
   --tw-bg-opacity: 1;
-  background-color: rgb(191 237 193 / var(--tw-bg-opacity));
+  background-color: rgb(129 214 195 / var(--tw-bg-opacity));
 }
 
 span.des {
@@ -804,6 +804,10 @@ footer {
 } */
 
 fieldset div button {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -831,6 +835,18 @@ on {
 
   .sm\:top-\[-20px\] {
     top: -20px;
+  }
+
+  .sm\:top-\[-15px\] {
+    top: -15px;
+  }
+
+  .sm\:right-\[20px\] {
+    right: 20px;
+  }
+
+  .sm\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .sm\:grid {

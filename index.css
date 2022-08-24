@@ -8,7 +8,7 @@
 }
 
 body{
-  @apply bg-gradient-to-b from-[#383838] to-[#2d2d2d] m-0 p-0 bg-no-repeat 
+  @apply bg-gradient-to-br from-[#aed797] to-[#73c9b7] m-0 p-0 bg-no-repeat 
   font-lato grid-rows-[1fr_6fr_1fr] grid-cols-1
    text-white w-screen h-screen grid sm:grid sm:h-full sm:overflow-auto
 }
@@ -30,24 +30,24 @@ div.time{
   sm:gap-y-[3vh]
 }
 div#card{
-  @apply w-[15vw] h-[25vh] bg-[#27FFFF] rounded-3xl shadow-xl grid grid-cols-1 grid-rows-[2fr_6fr]
+  @apply w-[15vw] h-[25vh] bg-[#bfeea3] rounded-3xl shadow-xl grid grid-cols-1 grid-rows-[2fr_6fr]
    hover:scale-125 transition-all hover:translate-y-9 
    sm:w-[70vw] sm:rounded-[120px] sm:shadow-2xl sm:justify-self-center overflow-hidden
 }
 div#card:nth-child(2){
-  @apply bg-[#B6C9BB]
+  @apply bg-[#72b2a4]
 }
 div#card:nth-child(3){
-  @apply bg-[#AAACB0]
+  @apply bg-[#98d277]
 }
 div#card:nth-child(4){
-  @apply bg-[#9684A1]
+  @apply bg-[#6cbcab]
 }
 div#card:nth-child(5){
-  @apply bg-[#985f99]
+  @apply bg-[#80c083]
 }
 div#card:last-child{
-  @apply bg-[#BFEDC1]
+  @apply bg-[#81d6c3]
 }
 span.des{
   @apply grid items-end text-[18px] pt-[3px] border-b-[4px] text-center
@@ -65,7 +65,7 @@ footer{
   @apply justify-self-center relative top-[-50px] hidden
 } */
 fieldset div button{
-  @apply hover:transform hover:scale-110 transition-all hover:shadow-lg
+  @apply hover:transform hover:scale-110 transition-all hover:shadow-lg px-2 my-[1px]
 }
 on{
   @apply border-l-zinc-50 border-l-2
