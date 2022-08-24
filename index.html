@@ -14,7 +14,35 @@
             <div class="name">
                   southstar's timer
             </div>
-            <img src="Arrowhead-Right-01-32.png" alt="">
+            <div class=" gri">
+            <img src="Arrowhead-Right-01-32.png" alt="Right arrow icon" class="img" onclick="disp()">
+            <div class=" justify-self-center relative top-[-50px] left-[90px] sm:relative sm:top-[-20px] hidden" id="opt">
+                  <fieldset class=" sm:grid sm:grid-rows-3 sm:grid-cols-3">
+                        <legend>Display Settings</legend>
+                        <div>
+                        <button id="all" onclick="clicke(All)">All</button>
+                  </div>
+                  <div>
+                        <button id="Year" onclick="clicke(Year)">Year</button>
+                  </div>
+                  <div>
+                        <button id="Month" onclick="clicke(Month)">Month</button>
+                  </div>
+                  <div>
+                        <button id="Day" onclick="clicke(Day)">Day</button>
+                  </div>
+                  <div>
+                        <button id="hour" onclick="clicke(Hour)">Hour</button>
+                  </div>
+                  <div>
+                        <button id="minute" onclick="clicke(Minute)">Minute</button>
+                  </div>
+                  <div>
+                        <button id="second" onclick="clicke(Second)">Seconds</button>
+                  </div>
+            </fieldset>
+      </div>
+      </div>
       </header>
       <main>
             <div class="time">

@@ -8,27 +8,46 @@
 }
 
 body{
-  @apply bg-gradient-to-b from-[#44b5d4] to-[#3982f5] m-0 p-0 bg-no-repeat 
+  @apply bg-gradient-to-b from-[#383838] to-[#2d2d2d] m-0 p-0 bg-no-repeat 
   font-lato grid-rows-[1fr_6fr_1fr] grid-cols-1
-   text-white w-screen h-screen grid
+   text-white w-screen h-screen grid sm:grid sm:h-full sm:overflow-auto
 }
 header{
-  @apply grid grid-cols-2 justify-items-end py-5
+  @apply grid grid-cols-2 justify-items-end py-5 sm:grid relative
 }
-header img{
-  @apply rounded-full border-4 p-2 mr-14
+header img.img{
+  @apply rounded-full border-4 p-2 mr-14 animate-pulse justify-self-end mt-6 sm:relative
+  sm:top-[-18px] sm:left-[45px]
 }
 .name{
-  @apply uppercase text-2xl items-end
+  @apply uppercase text-2xl items-end sm:ml-14
 }
 main{
-  @apply grid place-items-center w-full h-full place-content-evenly
+  @apply grid place-items-center w-full h-full sm:grid sm:m-0 sm:p-0
 }
 div.time{
-  @apply grid-flow-col grid justify-evenly gap-x-[1vw]
+  @apply grid-flow-col grid gap-x-[1vw] sm:grid sm:grid-flow-row sm:w-[100vw] sm:m-0 sm:p-0
+  sm:gap-y-[3vh]
 }
 div#card{
-  @apply w-[15vw] h-[25vh] bg-[#44B5D4] rounded-3xl shadow-xl grid grid-cols-1 grid-rows-[2fr_6fr]
+  @apply w-[15vw] h-[25vh] bg-[#27FFFF] rounded-3xl shadow-xl grid grid-cols-1 grid-rows-[2fr_6fr]
+   hover:scale-125 transition-all hover:translate-y-9 
+   sm:w-[70vw] sm:rounded-[120px] sm:shadow-2xl sm:justify-self-center overflow-hidden
+}
+div#card:nth-child(2){
+  @apply bg-[#B6C9BB]
+}
+div#card:nth-child(3){
+  @apply bg-[#AAACB0]
+}
+div#card:nth-child(4){
+  @apply bg-[#9684A1]
+}
+div#card:nth-child(5){
+  @apply bg-[#985f99]
+}
+div#card:last-child{
+  @apply bg-[#BFEDC1]
 }
 span.des{
   @apply grid items-end text-[18px] pt-[3px] border-b-[4px] text-center
@@ -37,5 +56,17 @@ span.des{
   @apply grid items-center text-[2.5em] text-center drop-shadow-2xl
 }
 footer{
-  @apply grid text-[20px] text-center 
+  @apply grid text-[20px] text-center sm:grid sm:items-center
 }
+.gri{
+  @apply grid m-0 p-0 w-full absolute
+}
+/* header div form#form.form{
+  @apply justify-self-center relative top-[-50px] hidden
+} */
+fieldset div button{
+  @apply hover:transform hover:scale-110 transition-all hover:shadow-lg
+}
+on{
+  @apply border-l-zinc-50 border-l-2
+} 
