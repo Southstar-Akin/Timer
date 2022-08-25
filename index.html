@@ -15,10 +15,16 @@
                   southstar's timer
             </div>
             <div class=" gri">
-            <img src="Arrowhead-Right-01-32.png" alt="Right arrow icon" class="img" onclick="disp()">
-            <div class=" justify-self-center relative top-[-50px] left-[90px] sm:relative sm:top-[-20px] hidden" id="opt">
-                  <fieldset class=" sm:grid sm:grid-rows-3 sm:grid-cols-3 sm:relative sm:top-[-15px] sm:right-[20px]">
+            <img src="Settings-02-32.png" alt="Right arrow icon" class="img" onclick="disp()">
+            <div class=" justify-self-start hidden" id="opt">
+                  <fieldset class="grid grid-rows-1 grid-cols-4">
                         <legend>Display Settings</legend>
+                        <div id="setting">
+                              <div class="Cards" onclick="cr()">Cards</div>
+                              <div class="theme" onclick="em()">Theme</div>
+                              <div class="quotes" onclick="ot()">Quotes</div>
+                        </div>
+                        <div id="cd">
                         <div id="but">
                         <button id="all" onclick="clic(All)">All</button>
                   </div>
@@ -40,6 +46,20 @@
                   <div id="but">
                         <button id="second" onclick="ick(Second)">Seconds</button>
                   </div>
+            </div>
+            <div id="theme">
+                  <span class="mid" onclick="m()">Midnight</span>
+                  <span class="dawn" onclick="D()">Dawn</span>
+                  <span class="morning" onclick="b()">Morning</span>
+                  <span class="Midd" onclick="Mid()">Mid day</span>
+                  <span class="Late" onclick="lat()">Late Mid day</span>
+                  <span class="evening" onclick="eve()">Evening</span>
+                  <span class="night"onclick="NI()">Night</span>
+            </div>
+            <div id="quotes">
+                  <span onclick="titi()">Motivational</span>
+                  <span onclick="mimi()">My Love Story</span>
+            </div>
             </fieldset>
       </div>
       </div>

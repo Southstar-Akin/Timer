@@ -551,24 +551,24 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
-  position: relative;
-}
-
-.top-\[-50px\] {
-  top: -50px;
-}
-
-.left-\[90px\] {
-  left: 90px;
+.grid {
+  display: grid;
 }
 
 .hidden {
   display: none;
 }
 
-.justify-self-center {
-  justify-self: center;
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.justify-self-start {
+  justify-self: start;
 }
 
 @font-face{
@@ -792,10 +792,10 @@ footer {
 }
 
 .gri {
-  position: absolute;
   margin: 0px;
   display: grid;
   width: 100%;
+  justify-items: start;
   padding: 0px;
 }
 
@@ -803,7 +803,7 @@ footer {
   @apply justify-self-center relative top-[-50px] hidden
 } */
 
-fieldset div button {
+:is(fieldset div button, div#setting div, div#theme span, div#quotes span) {
   margin-top: 1px;
   margin-bottom: 1px;
   padding-left: 0.5rem;
@@ -813,7 +813,7 @@ fieldset div button {
   transition-duration: 150ms;
 }
 
-fieldset div button:hover {
+:is(fieldset div button, div#setting div, div#theme span, div#quotes span):hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -829,35 +829,7 @@ on {
 }
 
 @media (min-width: 60px) and (max-width: 767px) {
-  .sm\:relative {
-    position: relative;
-  }
-
-  .sm\:top-\[-20px\] {
-    top: -20px;
-  }
-
-  .sm\:top-\[-15px\] {
-    top: -15px;
-  }
-
-  .sm\:right-\[20px\] {
-    right: 20px;
-  }
-
   .sm\:mt-5 {
     margin-top: 1.25rem;
-  }
-
-  .sm\:grid {
-    display: grid;
-  }
-
-  .sm\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .sm\:grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 } 

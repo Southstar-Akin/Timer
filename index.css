@@ -59,12 +59,12 @@ footer{
   @apply grid text-[20px] text-center sm:grid sm:items-center
 }
 .gri{
-  @apply grid m-0 p-0 w-full absolute
+  @apply grid m-0 p-0 w-full justify-items-start
 }
 /* header div form#form.form{
   @apply justify-self-center relative top-[-50px] hidden
 } */
-fieldset div button{
+:is(fieldset div button, div#setting div, div#theme span, div#quotes span){
   @apply hover:transform hover:scale-110 transition-all hover:shadow-lg px-2 my-[1px]
 }
 on{
