@@ -551,6 +551,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .grid {
   display: grid;
 }
@@ -569,6 +573,10 @@ video {
 
 .justify-self-start {
   justify-self: start;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 @font-face{
@@ -605,7 +613,6 @@ body {
 }
 
 header {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: end;
@@ -647,9 +654,8 @@ header img.img {
 
 @media (min-width: 60px) and (max-width: 767px) {
   header img.img {
-    position: relative;
-    top: -18px;
-    left: 45px;
+    margin-top: 0px;
+    display: grid;
   }
 }
 
@@ -662,7 +668,10 @@ header img.img {
 
 @media (min-width: 60px) and (max-width: 767px) {
   .name {
-    margin-left: 3.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: grid;
+    align-items: center;
   }
 }
 
@@ -677,6 +686,7 @@ main {
   main {
     margin: 0px;
     display: grid;
+    align-items: flex-start;
     padding: 0px;
   }
 }
@@ -691,6 +701,7 @@ div.time {
 @media (min-width: 60px) and (max-width: 767px) {
   div.time {
     margin: 0px;
+    margin-top: 0.5rem;
     display: grid;
     width: 100vw;
     grid-auto-flow: row;
@@ -799,11 +810,17 @@ footer {
   padding: 0px;
 }
 
+@media (min-width: 60px) and (max-width: 767px) {
+  .gri {
+    align-items: center;
+  }
+}
+
 /* header div form#form.form{
   @apply justify-self-center relative top-[-50px] hidden
 } */
 
-:is(fieldset div button, div#setting div, div#theme span, div#quotes span) {
+:is(fieldset div button, div#setting div, div#theme span, div#quotes span, div.name a, div.mew a, button a.home) {
   margin-top: 1px;
   margin-bottom: 1px;
   padding-left: 0.5rem;
@@ -813,7 +830,7 @@ footer {
   transition-duration: 150ms;
 }
 
-:is(fieldset div button, div#setting div, div#theme span, div#quotes span):hover {
+:is(fieldset div button, div#setting div, div#theme span, div#quotes span, div.name a, div.mew a, button a.home):hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -828,8 +845,85 @@ on {
   border-left-color: rgb(250 250 250 / var(--tw-border-opacity));
 }
 
+div.name a {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+div#para {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  height: 80vh;
+  width: 80vw;
+  place-self: center;
+  overflow: auto;
+  border-radius: 1.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.bet {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: block;
+  border-bottom-width: 2px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 89 145 / var(--tw-bg-opacity));
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.intro {
+  font-size: 18px;
+}
+
+div.mew {
+  overflow: auto;
+}
+
+div.mew a {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+button a.home {
+  position: relative;
+  bottom: 1.5rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
 @media (min-width: 60px) and (max-width: 767px) {
-  .sm\:mt-5 {
-    margin-top: 1.25rem;
+  .sm\:m-0 {
+    margin: 0px;
   }
-} 
+
+  .sm\:grid {
+    display: grid;
+  }
+
+  .sm\:h-\[100vh\] {
+    height: 100vh;
+  }
+
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .sm\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:gap-x-1 {
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
+  }
+}

@@ -13,21 +13,20 @@ body{
    text-white w-screen h-screen grid sm:grid sm:h-full sm:overflow-auto
 }
 header{
-  @apply grid grid-cols-2 justify-items-end py-5 sm:grid relative
+  @apply grid grid-cols-2 justify-items-end py-5 sm:grid
 }
 header img.img{
-  @apply rounded-full border-4 p-2 mr-14 animate-pulse justify-self-end mt-6 sm:relative
-  sm:top-[-18px] sm:left-[45px]
+  @apply rounded-full border-4 p-2 mr-14 animate-pulse justify-self-end mt-6 sm:grid sm:mt-0
 }
 .name{
-  @apply uppercase text-2xl items-end sm:ml-14
+  @apply uppercase text-2xl items-end sm:mx-2 sm:items-center sm:grid
 }
 main{
-  @apply grid place-items-center w-full h-full sm:grid sm:m-0 sm:p-0
+  @apply grid place-items-center w-full h-full sm:grid sm:m-0 sm:p-0 sm:items-start
 }
 div.time{
   @apply grid-flow-col grid gap-x-[1vw] sm:grid sm:grid-flow-row sm:w-[100vw] sm:m-0 sm:p-0
-  sm:gap-y-[3vh]
+  sm:gap-y-[3vh] sm:mt-2
 }
 div#card{
   @apply w-[15vw] h-[25vh] bg-[#bfeea3] rounded-3xl shadow-xl grid grid-cols-1 grid-rows-[2fr_6fr]
@@ -59,14 +58,35 @@ footer{
   @apply grid text-[20px] text-center sm:grid sm:items-center
 }
 .gri{
-  @apply grid m-0 p-0 w-full justify-items-start
+  @apply grid m-0 p-0 w-full justify-items-start sm:items-center
 }
 /* header div form#form.form{
   @apply justify-self-center relative top-[-50px] hidden
 } */
-:is(fieldset div button, div#setting div, div#theme span, div#quotes span){
+:is(fieldset div button, div#setting div, div#theme span, div#quotes span, div.name a, div.mew a, button a.home){
   @apply hover:transform hover:scale-110 transition-all hover:shadow-lg px-2 my-[1px]
 }
 on{
   @apply border-l-zinc-50 border-l-2
 } 
+div.name a{
+  @apply p-2 rounded-lg
+}
+div#para{
+  @apply h-[80vh] w-[80vw] shadow-lg place-self-center row-span-full col-span-full rounded-3xl overflow-auto
+}
+.bet{
+  @apply block text-lg text-center border-b-2 sticky top-0 bg-[#105991]
+}
+.intro{
+  @apply text-[18px]
+}
+div.mew{
+  @apply overflow-auto
+}
+div.mew a{
+  @apply underline
+}
+button a.home{
+  @apply relative bottom-6 p-4 rounded-xl place-items-center
+}

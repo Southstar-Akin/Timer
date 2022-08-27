@@ -248,7 +248,7 @@ const quotes = ["You are Beautiful","You are art","You can do this",
 "Say less than necessary","If We're unwilling to fail, We're unwilling to succeed","It's okay to fail, We build it better the second time"]
 
 
-const loveQuotes = ["I didn't love her at first sight","When I first met her","She was....","I found her boyish",
+let loveQuotes = ["I didn't love her at first sight","When I first met her","She was....","I found her boyish",
 "Was wearing a shirt","Looked liked her dad owned it","Later when we were acquainted","I asked her about it","And I was right",
 "It belonged to her dad","We became friends","Music was our thing","Not a lot mattered to us in our early teens years","Music was the thread that held us together",
 "And then we fell in love","It felt ✨✨✨","I...","I was in love...","Felt like the first time ever",
@@ -265,11 +265,12 @@ function randomnum(){
  return Math.floor(Math.random() * quotes.length)
 }
 function moquote(){
-  return footer.textContent = `${quotes[randomnum()]}`
+ footer.textContent = `"${quotes[randomnum()]}"`
 }
+let inter = setInterval(moquote, 3000)
 }
 
-function lem(){
+let lem = function(){
 let i = 0;
 function quote(){
     footer.textContent = `"${loveQuotes[i]}"`
@@ -337,7 +338,7 @@ function changeBackground(){
       card.children[i].style.backgroundColor = "#775352"
     }
   }//night to midnight
-  else if(ho >= 19 && ho < 23 && mi < 59){
+  else if(ho >= 19 && ho < 24){
     body.style.backgroundImage = "linear-gradient(to bottom, #3c2e57 10%, #213746 90%)"
     console.log("Night")
     for(let i = 0; i < card.children.length; i++){
@@ -519,7 +520,7 @@ if( ti % 2 != 0){
 //  let inter = setInterval(first, 3000)
 }else{
   qu.dom.children[0].style.borderLeft = "none"
-  footer.textContent = ``
+sto()
 }
 }
 let mi = 0
@@ -533,6 +534,6 @@ function mimi(){
    // let inter = setInterval(lem, 3000)
   }else{
     qu.dom.children[1].style.borderLeft = "none"
-    stopStory()
+    
   }
   }

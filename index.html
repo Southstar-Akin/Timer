@@ -10,14 +10,14 @@
       <title>Time display</title>
 </head>
 <body>
-      <header>
+      <header class=" sm:grid sm:grid-rows-2 sm:grid-cols-1 sm:m-0 sm:p-0">
             <div class="name">
-                  southstar's timer
+                <a href="/about.html">southstar's timer</a>
             </div>
             <div class=" gri">
             <img src="Settings-02-32.png" alt="Right arrow icon" class="img" onclick="disp()">
             <div class=" justify-self-start hidden" id="opt">
-                  <fieldset class="grid grid-rows-1 grid-cols-4">
+                  <fieldset class="grid grid-rows-1 grid-cols-4 sm:grid sm:gap-x-1">
                         <legend>Display Settings</legend>
                         <div id="setting">
                               <div class="Cards" onclick="cr()">Cards</div>
@@ -64,7 +64,7 @@
       </div>
       </div>
       </header>
-      <main class=" sm:mt-5">
+      <main class="m-0 p-0">
             <div class="time">
                   <div id="card">
                         <span class="des">Year</span>
