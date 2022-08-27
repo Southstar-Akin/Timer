@@ -79,10 +79,10 @@ div#para{
   @apply block text-lg text-center border-b-2 sticky top-0 bg-[#105991]
 }
 .intro{
-  @apply text-[18px]
+  @apply text-[18px] mx-5 sm:mx-0
 }
 div.mew{
-  @apply overflow-auto
+  @apply overflow-auto mx-5 sm:mx-0
 }
 div.mew a{
   @apply underline

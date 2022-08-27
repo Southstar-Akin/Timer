@@ -877,11 +877,29 @@ div#para {
 }
 
 .intro {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
   font-size: 18px;
 }
 
+@media (min-width: 60px) and (max-width: 767px) {
+  .intro {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
 div.mew {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
   overflow: auto;
+}
+
+@media (min-width: 60px) and (max-width: 767px) {
+  div.mew {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 div.mew a {
