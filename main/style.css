@@ -555,11 +555,6 @@ video {
   margin: 0px;
 }
 
-.my-40 {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
-
 .my-\[40px\] {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -579,14 +574,6 @@ video {
 
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-
-.place-content-center {
-  place-content: center;
-}
-
-.items-center {
-  align-items: center;
 }
 
 .justify-self-start {
@@ -677,7 +664,15 @@ header img.img {
   }
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
 .name {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   align-items: flex-end;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -881,17 +876,24 @@ div#para {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media (min-width: 60px) and (max-width: 767px) {
+  div#para {
+    width: 90vw;
+  }
+}
+
 .bet {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   display: block;
   border-bottom-width: 2px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 89 145 / var(--tw-bg-opacity));
   text-align: center;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .intro {
@@ -902,21 +904,22 @@ div#para {
 
 @media (min-width: 60px) and (max-width: 767px) {
   .intro {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
 div.mew {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+  margin-bottom: 0.25rem;
   overflow: auto;
 }
 
 @media (min-width: 60px) and (max-width: 767px) {
   div.mew {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 

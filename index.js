@@ -13,11 +13,9 @@ let opt = document.querySelector("#opt")
 let card = document.querySelector(".time")
 let body = document.querySelector("body")
 let settings = document.querySelector("#setting")
-//let cd = document.querySelector(".Cards")
-// let theme = document.querySelector(".theme")
-// let qu = document.querySelector(".quotes")
+let nam = document.querySelector("div.name a")
 
-console.log()
+console.log(nam)
 //settings functionality area for box selection
 let All =  {
   dom: document.querySelector("button#all"),
@@ -264,27 +262,27 @@ function first(){
 function randomnum(){
  return Math.floor(Math.random() * quotes.length)
 }
-function moquote(){
  footer.textContent = `"${quotes[randomnum()]}"`
 }
-let inter = setInterval(moquote, 3000)
-}
 
+let start = {
+ strt: setInterval(first, 3000)
+  }
+function stp(){
+  clearInterval(start.strt)
+}
+let v = 0;
 let lem = function(){
-let i = 0;
-function quote(){
-    footer.textContent = `"${loveQuotes[i]}"`
-    i++
-    stopStory()
-}
-let inter = setInterval(quote, 3000)
-function stopStory(){
-  if(i == loveQuotes.length){
-    clearInterval(inter)
-  } 
-}
+    footer.textContent = `"${loveQuotes[v]}"`
+    v++
 }
 
+function star(){
+let st = setInterval(lem, 3000) 
+if(v == loveQuotes.length){
+clearInterval(st)
+}
+}
 
 function changeBackground(){
   const time = new Date()
@@ -322,11 +320,13 @@ function changeBackground(){
     console.log("Mid day")
     for(let i = 0; i < card.children.length; i++){
       card.children[i].style.backgroundColor = "#bad2c5"
+      body.style.color = "#2d2d2d"
     }
   }// late mid day to evening
   else if(ho >= 14 && ho < 18){
-    body.style.backgroundImage = "linear-gradient(to bottom, #ffee99 10%, #8e6993 90%)"
+    body.style.backgroundImage = "linear-gradient(to bottom, #C6BA7B 10%, #8e6993 90%)"
     console.log("Late mid day")
+    body.style.color = "#2d2d2d"
     for(let i = 0; i < card.children.length; i++){
       card.children[i].style.backgroundColor = "#d7be96"
     }
@@ -334,6 +334,7 @@ function changeBackground(){
   else if(ho >= 18 && ho < 19){
     body.style.backgroundImage = "linear-gradient(to bottom, #3a3157 10%, #e99a4e 90%)"
     console.log("Evening")
+
     for(let i = 0; i < card.children.length; i++){
       card.children[i].style.backgroundColor = "#775352"
     }
@@ -404,6 +405,7 @@ M++
       body.style.backgroundImage = "linear-gradient(to bottom, #105b93 10%, #381749)"
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#12437c"
+        body.style.color = "#FFFFFF"
       }  
     }else{
       the.dom.children[0].style.borderLeft = "none"
@@ -420,6 +422,7 @@ function D(){
       body.style.backgroundImage = "linear-gradient(to bottom, #1e6b96 10%, #f4a18b 90%)"
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#5a7b91"
+        body.style.color = "#FFFFFF"
       }  
     }else{
       the.dom.children[1].style.borderLeft = "none"
@@ -437,7 +440,7 @@ function b(){
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#5778bf"
       }
-  
+      body.style.color = "#FFFFFF"
     }else{
       the.dom.children[2].style.borderLeft = "none"
       changeBackground()
@@ -454,6 +457,7 @@ function Mid(){
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#bad2c5"
       }  
+      body.style.color = "#2d2d2d"
     }else{
       the.dom.children[3].style.borderLeft = "none"
       changeBackground()
@@ -466,10 +470,11 @@ function lat(){
       the.dom.children[4].style.borderLeft = "white"
       the.dom.children[4].style.borderLeft = "2px"
       the.dom.children[4].style.borderLeft = "solid"
-      body.style.backgroundImage = "linear-gradient(to bottom, #ffee99 10%, #8e6993 90%)"
+      body.style.backgroundImage = "linear-gradient(to bottom, #A79746 10%, #8e6993 90%)"
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#d7be96"
       }  
+      body.style.color = "#2d2d2d"
     }else{
       the.dom.children[4].style.borderLeft = "none"
       changeBackground()
@@ -486,6 +491,7 @@ function eve(){
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#775352"
       }  
+      body.style.color = "#FFFFFF"
     }else{
       the.dom.children[5].style.borderLeft = "none"
       changeBackground()
@@ -502,6 +508,7 @@ function NI(){
       for(let i = 0; i < card.children.length; i++){
         card.children[i].style.backgroundColor = "#323151"
       }  
+      body.style.color = "#FFFFFF"
     }else{
       the.dom.children[6].style.borderLeft = "none"
       changeBackground()
@@ -516,11 +523,10 @@ if( ti % 2 != 0){
   qu.dom.children[0].style.borderLeft = "white"
   qu.dom.children[0].style.borderLeft = "2px"
   qu.dom.children[0].style.borderLeft = "solid"
-  first()
-//  let inter = setInterval(first, 3000)
+  
 }else{
   qu.dom.children[0].style.borderLeft = "none"
-sto()
+  stp()
 }
 }
 let mi = 0
@@ -530,10 +536,78 @@ function mimi(){
     qu.dom.children[1].style.borderLeft = "white"
     qu.dom.children[1].style.borderLeft = "2px"
     qu.dom.children[1].style.borderLeft = "solid"
-    lem()
+    star()
    // let inter = setInterval(lem, 3000)
   }else{
     qu.dom.children[1].style.borderLeft = "none"
-    
   }
   }
+  const names = ["southstar's timer",]
+
+  
+  function changeName(){
+    const time = new Date()
+    let ho = time.getHours()
+    let V = 0
+    if(ho >= 0 && ho < 4){
+      names.push("the sun will rise soon")
+      function randomnum(){
+        return Math.floor(Math.random() * names.length)
+      }
+     let na = function(){
+       nam.textContent = `${names[randomnum()]}`
+      }
+      setInterval(na, 1e4)
+         }
+      else if(ho >= 4 && ho < 6){
+        names.push("rise and shine")
+        function randomnum(){
+          return Math.floor(Math.random() * names.length)
+        }
+       let na = function(){
+         nam.textContent = `${names[randomnum()]}`
+        }
+        setInterval(na, 1e4)
+                  }
+   else if(ho >= 6 && ho < 10){
+    names.push("Good morning")
+    function randomnum(){
+      return Math.floor(Math.random() * names.length)
+    }
+   let na = function(){
+     nam.textContent = `${names[randomnum()]}`
+    }
+    setInterval(na, 1e4)
+              }
+   else if(ho >= 10 && ho < 14){
+   names.push("Good afternoon")
+   function randomnum(){
+    return Math.floor(Math.random() * names.length)
+  }
+ let na = function(){
+   nam.textContent = `${names[randomnum()]}`
+  }
+  setInterval(na, 1e4)
+            }
+   else if(ho >= 14 && ho < 18){
+    names.push("It's late afternoon")  
+    function randomnum(){
+      return Math.floor(Math.random() * names.length)
+    }
+   let na = function(){
+     nam.textContent = `${names[randomnum()]}`
+    }
+    setInterval(na, 1e4)
+              }
+  else if(ho >= 18 && ho < 19){
+    names.push("Good evening")
+    function randomnum(){
+      return Math.floor(Math.random() * names.length)
+    }
+   let na = function(){
+     nam.textContent = `${names[randomnum()]}`
+    }
+    setInterval(na, 1e4)
+              }
+    }
+  changeName()

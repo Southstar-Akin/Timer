@@ -19,7 +19,7 @@ header img.img{
   @apply rounded-full border-4 p-2 mr-14 animate-pulse justify-self-end mt-6 sm:grid sm:mt-0
 }
 .name{
-  @apply uppercase text-2xl items-end sm:mx-2 sm:items-center sm:grid
+  @apply uppercase text-2xl items-end sm:mx-2 sm:items-center sm:grid animate-pulse
 }
 main{
   @apply grid place-items-center w-full h-full sm:grid sm:m-0 sm:p-0 sm:items-start
@@ -73,16 +73,16 @@ div.name a{
   @apply p-2 rounded-lg
 }
 div#para{
-  @apply h-[80vh] w-[80vw] shadow-lg place-self-center row-span-full col-span-full rounded-3xl overflow-auto
+  @apply h-[80vh] w-[80vw] shadow-lg place-self-center row-span-full col-span-full rounded-3xl overflow-auto sm:w-[90vw]
 }
 .bet{
-  @apply block text-lg text-center border-b-2 sticky top-0 bg-[#105991]
+  @apply block text-lg text-center border-b-2 sticky top-0 backdrop-blur-sm
 }
 .intro{
-  @apply text-[18px] mx-5 sm:mx-0
+  @apply text-[18px] mx-5 sm:mx-4
 }
 div.mew{
-  @apply overflow-auto mx-5 sm:mx-0
+  @apply overflow-auto mx-5 sm:mx-4 mb-1
 }
 div.mew a{
   @apply underline
