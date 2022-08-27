@@ -555,6 +555,16 @@ video {
   margin: 0px;
 }
 
+.my-40 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.my-\[40px\] {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .grid {
   display: grid;
 }
@@ -569,6 +579,14 @@ video {
 
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-self-start {
@@ -918,6 +936,11 @@ button a.home {
 @media (min-width: 60px) and (max-width: 767px) {
   .sm\:m-0 {
     margin: 0px;
+  }
+
+  .sm\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .sm\:grid {
